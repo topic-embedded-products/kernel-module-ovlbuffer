@@ -297,7 +297,7 @@ static int ovlbuf_probe(struct platform_device *pdev)
 	for (j = 0; j < fbdev->frames; ++j)
 	{
 		pixel = 0x0;
-		dev_info(fbdev->device, "frame: %u phys=%#x\n", j, fb);
+		dev_info(fbdev->device, "frame: %u virt=%p\n", j, fb);
 		for (i = fbdev->vsize; i != 0; --i) {
 			memset_io(fb, pixel, fbdev->hsize);
 			++pixel;
